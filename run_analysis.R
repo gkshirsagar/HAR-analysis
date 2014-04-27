@@ -67,9 +67,6 @@ getLabel <- function(actCode = numeric()) {
 # Construct new table with activity labels
 activityTable <- sapply(activityTableRaw[,1], getLabel)
 
-# Assign informative column name
-#colnames(activityTable) <- "Activity"
-
 
 
 ## Read and prepare the readings of the sensors.
