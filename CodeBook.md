@@ -28,14 +28,14 @@ The data files that were used for analysis are:
 2. `UCI HAR Dataset/train/subject_train.txt` was merged with `UCI HAR Dataset/test/subject_test.txt` and read into a table called `subjectTable` in R.
 3. `UCI HAR Dataset/train/y_train.txt` was merged with `UCI HAR Dataset/test/y_test.txt` and read into a table called `activityTableRaw` in R.
 4. The descriptive names for activities were read from `UCI HAR Dataset/activity_labels.txt` and a new table `activityTable` was created with the activity names for activity codes in R.
-5. We required only those sensor measurements which were 'mean' or 'standard deviation'. There were 33 each of such columns, amounting to 66 columns of measurements.
+5. For the purpose of this analysis, we required only those sensor measurements which were 'mean' or 'standard deviation'. There were 33 each of such columns, amounting to 66 columns of measurements.
 6. `UCI HAR Dataset/features.txt` was read to obtain feature names.
 7. A required columns vector was created in R to read only those columns from the data files containing the required features.
 8. `UCI HAR Dataset/train/X_train.txt` was merged with `UCI HAR Dataset/test/X_test.txt` and read into a table called `readingsTable` in R with only the required 66 columns.
 9. The 3 tables `subjectTable`, `activityTable`, `readingsTable` were given appropriate column names.
 10. The 3 tables were then merged together to obtain the master table containing data for all subjects for all activities for the required measurements, named as `mergedTable` in R. This table had 10299 rows and 68 columns.
-10. To obtain a short, summarized, tidy representation of the master table, it was grouped by subject first and then activities and then collapsed to summarize just the means for each measurement. This table had 180 rows (30 subjects x 6 activities) and 68 columns.
-11. A tidy data set was exported as a text file and provided for viewing.
+11. To obtain a short, summarized, tidy representation of the master table, it was grouped by subject first and then activities and then collapsed to summarize just the means for each measurement. This table had 180 rows (30 subjects x 6 activities) and 68 columns.
+12. A tidy data set was exported as a text file and provided for viewing.
 
 ## Names of Columns in the Tidy Table
 * Subject: subject code; type: `factor`; value: `1:30`.
